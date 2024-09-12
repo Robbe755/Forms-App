@@ -6,6 +6,17 @@
     <title>My Microsoft Form App</title>
     <link rel="manifest" href="/manifest.json">
 </head>
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js').then((registration) => {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, (error) => {
+                console.log('ServiceWorker registration failed: ', error);
+            });
+        });
+    }
+</script>
 <body>
     <iframe src="https://forms.office.com/r/S124q2cfZB" width="100%" height="1000px"></iframe>
 </body>
