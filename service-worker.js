@@ -4,8 +4,6 @@ const urlsToCache = [
     '/index.html',
     '/manifest.json',
     '/styles.css',
-    '/icon-192x192.png',
-    '/icon-512x512.png'
 ];
 
 // Install event: Cache files on install
